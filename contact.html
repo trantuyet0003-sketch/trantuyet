@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T U Y E T</title>
+  <link rel="icon" type="image/png" href="image/Group 9.png">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+  <nav class="header">
+    <img src="image/Group 9.png" alt="Logo" class="logo">
+    <div class="menu">
+      <a href="print.html" class="menu-link" data-link="#print">PRINTS</a>
+      <a href="Classes.html" class="menu-link" data-link="#contact">CLASSES</a>
+      <a href="about.html" class="menu-link" data-link="#about">ABOUT</a>
+      <a href="contact.html" class="menu-link" data-link="#contact">CONTACT</a>
+    </div>
+    <div class="bars" onclick="toggleMenu()">
+      <i id="menuIcon" class="fa-solid fa-bars-staggered"></i>
+    </div>
+  </nav>
+  <nav class="sidebar" id="sidebar">
+    <a href="print.html" class="menu-link" data-link="#print">PRINTS</a>
+    <a href="Classes.html" class="menu-link" data-link="#contact">CLASSES</a>
+    <a href="about.html" class="menu-link" data-link="#about">ABOUT</a>
+    <a href="contact.html" class="menu-link" data-link="#contact">CONTACT</a>
+  </nav>
+  <script src="bars.js"></script>
+  <script src="link.js"></script>
+  <script src="script.js"></script>
+  <script src="anh.js"></script>
+  <script src="contact.js"></script>
+  <!-- CONTACT -->
+  <div class="contact-container">
+    <h2>Contact</h2>
+    <p class="subtitle">
+      Please leave your contact information,
+      and we will get back to you as soon as possible.
+    </p>
+    <div class="contact-content">
+      <!-- CONTACT INFO -->
+      <div class="contact-info">
+        <p><strong>Email:</strong> trantuyet0003@gmail.com</p>
+        <p><strong>Phone:</strong> 0343879401</p>
+        <p><strong>Address:</strong> 225 Cư xá đường Sắc, Q3, TP.HCM</p>
+      </div>
+      <!-- FORM -->
+      <form class="contact-form" id="contactForm">
+        <input type="text" id="name" placeholder="Full name" required>
+        <input type="email" id="email" placeholder="SĐT" required>
+        <textarea id="message" placeholder="Message content" rows="4" required>
+        </textarea>
+        <button type="submit">
+          Send message
+        </button>
+      </form>
+    </div>
+  </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    Tran Tuyet © All rights Reserved 2026
+  </footer>
+
+</body>
+
+</html>

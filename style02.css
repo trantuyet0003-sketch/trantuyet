@@ -1,0 +1,348 @@
+html,
+body {
+  margin: 0 auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-align: justify;
+  background-color: #ffffff;
+  height: 100%;
+  margin: 0;
+}
+
+section {
+  line-height: 1.3;
+}
+
+/* HEADER */
+.header {
+  background-color: #282828;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 150px;
+
+}
+
+/* Mặc định: DESKTOP */
+.logo {
+  width: 30px;
+  height: auto;
+  /* giữ đúng tỉ lệ */
+}
+
+.header a {
+  color: #f7f7f7;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  max-width: 800px;
+
+}
+
+/* ===== LỚP PHỦ ĐỂ TỰ ĐÓNG SIDEBAR ===== */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
+  /* thấp hơn sidebar */
+}
+
+.overlay.active {
+  display: block;
+}
+
+/* BARS */
+.bars {
+  display: none;
+  color: rgb(206, 206, 206);
+  font-size: 25px;
+  cursor: pointer;
+  z-index: 9999;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+
+}
+
+#menuIcon {
+  transform: scaleY(.95);
+  /* càng nhỏ càng mỏng theo chiều dọc */
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  /* QUAN TRỌNG */
+  width: 250px;
+  height: 100%;
+  background-color: #464646;
+  padding: 60px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.menu-link {
+  position: relative;
+  padding-bottom: 6px;
+}
+
+/* gạch ngang */
+.menu-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: width 0.4s ease;
+}
+
+/* khi active → gạch chạy xong & dừng lại */
+.menu-link.active::after {
+  width: 100%;
+}
+
+
+/* ===== FILTER BAR ===== */
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin: 40px 0;
+}
+
+.filter-item {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.filter-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width 0.3s ease;
+}
+
+.filter-item.active::after {
+  width: 100%;
+}
+
+
+/* ===== GALLERY ===== */
+.gallery {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+   flex: 1;
+  display: grid;
+
+  gap: 24px;
+  margin-top: 20px;
+  justify-content: center;
+ 
+}
+
+.gallery-item {
+  text-align: center;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+
+  transition: transform 0.3s;
+}
+.gallery-item.hide {
+  display: none;
+}
+
+.title {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* ===== FILTER BAR ===== */
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin: 40px 0;
+}
+
+/* ITEM */
+.filter-item {
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  padding-bottom: 6px;
+  display: inline-block;   /* 🔥 BẮT BUỘC */
+}
+
+/* LINE */
+.filter-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: #000;
+  transition: width 0.3s ease;
+}
+
+/* ACTIVE */
+.filter-item.active::after {
+  width: 100%;
+}
+
+
+/* FOOTER KẾT TRANG */
+.footer {
+  text-align: center;
+  font-size: 13px;
+  color: #a8a6a1;
+  padding: 50px 0;
+  opacity: 0.6;
+  margin-top: auto;
+
+}
+
+
+
+/* iPad & tablet */
+@media (min-width: 834px) and (max-width: 1100px) {
+  .menu {
+    display: none;
+  }
+
+  .bars {
+    display: block;
+  }
+
+
+
+
+  .logo {
+    position: relative;
+    left: -115px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 834px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  .body {
+    max-width: 600px;
+  }
+
+  .header {
+    padding: 20px 20px;
+  }
+
+  /* Mặc định: DESKTOP */
+  .logo {
+    width: 23px;
+    position: relative;
+    left: 10px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .bars {
+    display: block !important;
+    font-size: 20px;
+    top: 20px;
+    right: 25px;
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .modal img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+  }
+
+  .modal .controls {
+    margin-top: 15px;
+    color: white;
+    font-size: 24px;
+    user-select: none;
+  }
+
+  .modal .controls span {
+    cursor: pointer;
+    margin: 0 20px;
+    font-weight: bold;
+  }
+
+.filter-item {
+  position: relative;
+  font-size: 12px;
+    padding-bottom: 4px;
+ 
+  }
+ .gallery {
+
+    gap: 20px;
+    justify-content: center;
+     margin-top: -5px;
+  }
+    /* FOOTER KẾT TRANG */
+  .footer {
+    margin-top: 50px;
+  }
+
+}

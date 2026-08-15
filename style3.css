@@ -1,0 +1,259 @@
+/* RESET CƠ BẢN */
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+   
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  text-align: justify;
+  
+}
+
+
+/* ================= HEADER ================= */
+.header {
+  background-color: #282828;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 150px;
+
+}
+
+.logo {
+  width: 30px;
+  height: auto;
+}
+
+.header a {
+  color: #f7f7f7;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+/* ================= OVERLAY ================= */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 998;
+}
+
+.overlay.active {
+  display: block;
+}
+
+/* ================= MENU ICON ================= */
+.bars {
+  display: none;
+  color: #cecece;
+  font-size: 25px;
+  cursor: pointer;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  z-index: 1001;
+}
+
+#menuIcon {
+  transform: scaleY(0.95);
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  /* đúng bằng width */
+  width: 200px;
+  height: 100%;
+  background-color: #464646;
+  padding: 60px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+/* ================= MENU LINK ================= */
+.menu-link {
+  position: relative;
+  padding-bottom: 6px;
+}
+
+.menu-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: width 0.4s ease;
+}
+
+.menu-link.active::after {
+  width: 100%;
+}
+
+
+
+
+
+
+
+.contact {
+    padding: 60px 20px;
+}
+
+.contact-container {
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    padding: 40px;
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.subtitle {
+    margin-bottom: 20px;
+    color: #545454;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #000;
+}
+
+.contact-form button {
+    padding: 12px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    opacity: 0.8;
+}
+
+
+/* ================= FOOTER ================= */
+.footer {
+  text-align: center;
+  font-size: 13px;
+  color: #a8a6a1;
+  padding: 50px 0;
+  opacity: 0.6;
+  margin-top: 200px;
+}
+
+
+
+
+/* ================= TABLET ================= */
+@media (max-width: 1100px) {
+  .menu {
+    display: none;
+  }
+
+  .bars {
+    display: block;
+  }
+
+  .two-column {
+    grid-template-columns: 1fr;
+    gap: 100px;
+    padding: 0 50px;
+  }
+
+  .logo {
+    left: 0;
+    position: static;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 834px) {
+  .header {
+    padding: 20px;
+  }
+
+  .logo {
+    width: 23px;
+  }
+
+  .bars {
+    font-size: 20px;
+    top: 20px;
+    right: 25px;
+  }
+
+  .container {
+    margin-top: 30px;
+    font-size: 14px;
+  }
+
+  .two-column {
+    display: block;
+    padding: 0 5px;
+  }
+
+.contact-form {
+   
+        padding-right: 20px;
+
+        box-sizing: border-box;
+}
+    .contact-content {
+        grid-template-columns: 1fr;
+        font-size: 14px;
+    }
+.subtitle {
+    font-size: 15px;
+}
+  .footer {
+    margin-top: 50px;
+  }
+}

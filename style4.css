@@ -1,0 +1,864 @@
+html,
+body {
+  margin: 0 auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-align: justify;
+  background-color: #ffffff;
+  height: 100%;
+  margin: 0;
+}
+
+section {
+  line-height: 1.3;
+}
+
+/* HEADER */
+.header {
+  background-color: #282828;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 150px;
+
+}
+
+/* Mặc định: DESKTOP */
+.logo {
+  width: 30px;
+  height: auto;
+  /* giữ đúng tỉ lệ */
+}
+
+.header a {
+  color: #f7f7f7;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  max-width: 800px;
+
+}
+
+/* ===== LỚP PHỦ ĐỂ TỰ ĐÓNG SIDEBAR ===== */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
+  /* thấp hơn sidebar */
+}
+
+.overlay.active {
+  display: block;
+}
+
+/* BARS */
+.bars {
+  display: none;
+  color: rgb(206, 206, 206);
+  font-size: 25px;
+  cursor: pointer;
+  z-index: 9999;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+
+}
+
+#menuIcon {
+  transform: scaleY(.95);
+  /* càng nhỏ càng mỏng theo chiều dọc */
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  /* QUAN TRỌNG */
+  width: 250px;
+  height: 100%;
+  background-color: #464646;
+  padding: 60px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.menu-link {
+  position: relative;
+  padding-bottom: 6px;
+}
+
+/* gạch ngang */
+.menu-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: width 0.4s ease;
+}
+
+/* khi active → gạch chạy xong & dừng lại */
+.menu-link.active::after {
+  width: 100%;
+}
+
+
+.intro p {
+    margin: 0; font-size: 16px; line-height: 1.8; text-align: justify; color: #333;
+    max-width: 1000px; margin: 0 auto; padding: 0 20px;
+}
+
+/* ==========================
+   MOTION ART HERO
+========================== */
+
+.hero {
+
+    min-height:75vh;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:60px 10%;
+
+    overflow:hidden;
+
+}
+
+
+
+/* IMAGE */
+
+.hero-image {
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    overflow:hidden;
+
+}
+
+
+.hero-image img {
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    opacity:1;
+
+    filter:
+    brightness(1.25)
+    contrast(1.02)
+    saturate(1.08)
+    ;
+
+    animation:zoomImage 22s infinite alternate ease-in-out;
+
+}
+
+
+/* LỚP ÁNH SÁNG */
+
+.hero-image::after {
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        90deg,
+        rgba(255,255,255,0.18),
+        rgba(255,255,255,0.02)
+    );
+
+}
+
+
+/* Hiệu ứng zoom nhẹ */
+
+@keyframes zoomImage {
+
+    from {
+
+        transform:scale(1);
+
+    }
+
+    to {
+
+        transform:scale(1.06);
+
+    }
+
+}
+
+
+
+/* lớp phủ nghệ thuật */
+
+.hero::after {
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        rgba(0,0,0,.8),
+
+        rgba(0,0,0,.25)
+
+    );
+
+}
+
+
+
+/* TEXT */
+
+.hero-text {
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:650px;
+
+    color:white;
+
+}
+
+
+
+.hero-text h1 {
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:90px;
+
+    font-weight:400;
+
+    line-height:.95;
+
+    letter-spacing:-3px;
+
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    animation:textShow 1.2s ease forwards;
+
+}
+
+
+
+.hero-text p {
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    color:#ddd;
+
+    max-width:450px;
+
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    animation:textShow 1.2s .3s ease forwards;
+
+}
+
+
+
+/* BUTTON */
+
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 20px;
+  background: white;
+  color: #111;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 12px;
+  border-radius: 20px;
+  transition: 0.4s;
+  opacity: 0;
+  animation: textShow 1.2s 0.6s ease forwards;
+}
+
+.btn:hover {
+  background: #c89b5b;
+  color: white;
+  transform: translateY(-5px);
+}
+
+
+
+
+
+
+@keyframes textShow {
+
+
+from {
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+}
+
+
+to {
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+}
+
+
+
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+
+.hero {
+
+    min-height:95vh;
+
+    padding:40px 25px;
+
+}
+
+
+
+.hero-text h1 {
+
+    font-size:55px;
+
+}
+
+
+
+.hero-image img {
+
+    opacity:.45;
+
+}
+
+
+}
+
+/* ================= TITLE ================= */
+
+
+section {
+    padding:70px 10%;
+}
+
+
+h2 {
+
+    font-size:38px;
+    text-align:center;
+    margin-bottom:40px;
+
+}
+
+
+
+/* ================= GALLERY ================= */
+
+
+.gallery {
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+
+}
+
+
+.gallery img {
+
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:15px;
+
+}
+
+
+.gallery-item img {
+
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+
+.gallery-item img:hover {
+
+    transform:scale(1.03);
+
+}
+
+
+
+/* ================= CARD ================= */
+
+
+.cards {
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+
+}
+
+
+.card {
+
+    padding:30px;
+    background:#e2e2e2;
+    border-radius:20px;
+
+}
+.card h3,
+.card p{
+    transition:color .4s ease;
+}
+
+.card:hover{
+      background:#d6c1ab;
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+
+
+/* ================= TEACHER ================= */
+
+
+.teacher {
+
+    display:flex;
+    gap:50px;
+    align-items:center;
+    background:#f5f5f5;
+
+}
+
+
+.teacher img {
+
+    width:250px;
+    height:250px;
+    object-fit:cover;
+    border-radius:50%;
+
+}
+
+
+.container{
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 10%;
+}
+.course{
+    background:#a9a9a9;
+    width:100%;
+    padding:80px 10%;
+}
+/* ================= FILTER ================= */
+
+
+.filter-bar {
+
+    display:flex;
+    justify-content:center;
+    gap:32px;
+    margin:40px 0;
+
+}
+
+
+.filter-item {
+
+    position:relative;
+    cursor:pointer;
+    padding-bottom:6px;
+
+}
+
+
+.filter-item::after {
+
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:0;
+    height:2px;
+    background:#000;
+    transition:.3s;
+
+}
+
+
+.filter-item.active::after {
+
+    width:100%;
+
+}
+
+
+
+/* ================= FORM ================= */
+
+.register {
+    background: #4b4b4b;
+    color: white;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+option {
+    font-size: 15px;
+}
+
+button {
+    color: #ffffff;
+    padding: 13px;
+    border: none;
+    background: #e3b667;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(.96);
+    background: #615d5d;
+    color: #ffffff;
+}
+
+
+/* =========================
+   COURSE DROPDOWN
+   ========================= */
+
+.course-selected {
+    width: 100%;
+    height: 50px;
+    padding: 0 18px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ffffff;
+    color: #333333;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+    user-select: none;
+}
+
+
+/* Mũi tên */
+
+.course-arrow {
+    font-size: 20px;
+    pointer-events: none;
+
+}
+
+
+/* Danh sách lựa chọn */
+
+.course-options {
+    width: 100%;
+    margin-top: 5px;
+
+    background: #0a0a0a;
+    color: #010101;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    display: none;
+
+    box-sizing: border-box;
+}
+
+
+/* Khi mở dropdown */
+
+.course-options.active {
+    display: block;
+}
+
+
+/* Từng lựa chọn */
+
+.course-option {
+    padding: 14px 18px;
+
+    cursor: pointer;
+
+    background: #ffffff;
+}
+
+
+/* Khi rê chuột */
+
+.course-option:hover {
+    background: #f2f2f2;
+}
+/* ================= MODAL ================= */
+
+
+.modal {
+
+    display:none;
+    position:fixed;
+    z-index:99999;
+    inset:0;
+    background:rgba(0,0,0,.85);
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+.modal img {
+
+    max-width:90%;
+    max-height:90%;
+    border-radius:10px;
+
+}
+
+
+/* ================= FOOTER ================= */
+
+
+.footer {
+
+    text-align:center;
+    font-size:13px;
+    color:#a8a6a1;
+    padding:50px 0;
+
+}
+
+
+
+/* ================= TABLET ================= */
+
+
+@media (max-width:1100px){
+
+    .menu {
+        display:none;
+    }
+
+
+    .bars {
+        display:block;
+    }
+
+
+    .header {
+
+        padding:25px 50px;
+
+    }
+
+
+    .gallery {
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+}
+
+
+
+
+/* ================= MOBILE ================= */
+
+
+@media(max-width:834px){
+
+
+    .header {
+
+        padding:20px;
+
+    }
+
+
+    .logo {
+
+        width:23px;
+
+    }
+
+
+    .bars {
+
+        top:20px;
+        right:25px;
+        font-size:20px;
+
+    }
+
+
+
+    .hero {
+
+        flex-direction:column;
+        gap:40px;
+
+    }
+
+
+    .hero-text {
+
+        width:100%;
+
+    }
+
+
+    .hero h1 {
+
+        font-size:38px;
+
+    }
+
+
+    .hero-image img {
+
+        width:100%;
+
+    }
+
+h2 {
+
+    font-size:25px;
+   
+
+
+}
+
+    .gallery,
+    .cards {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .teacher {
+
+        flex-direction:column;
+
+    }
+
+
+    section {
+
+        padding:50px 20px;
+
+    }
+
+
+
+}

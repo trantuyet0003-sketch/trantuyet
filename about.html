@@ -1,0 +1,125 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T U Y E T</title>
+  <link rel="icon" type="image/png" href="image/Group 9.png">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+  <nav class="header">
+    <img src="image/Group 9.png" alt="Logo" class="logo">
+    <div class="menu">
+      <a href="print.html" class="menu-link" data-link="#print">PRINTS</a>
+      <a href="Classes.html" class="menu-link" data-link="#contact">CLASSES</a>
+      <a href="about.html" class="menu-link" data-link="#about">ABOUT</a>
+      <a href="contact.html" class="menu-link" data-link="#contact">CONTACT</a>
+    </div>
+    <div class="bars" onclick="toggleMenu()">
+      <i id="menuIcon" class="fa-solid fa-bars-staggered"></i>
+    </div>
+  </nav>
+  <nav class="sidebar" id="sidebar">
+    <a href="print.html" class="menu-link" data-link="#print">PRINTS</a>
+    <a href="Classes.html" class="menu-link" data-link="#contact">CLASSES</a>
+    <a href="about.html" class="menu-link" data-link="#about">ABOUT</a>
+    <a href="contact.html" class="menu-link" data-link="#contact">CONTACT</a>
+  </nav>
+  <script src="bars.js"></script>
+  <script src="link.js"></script>
+  <script src="script.js"></script>
+  <script src="anh.js"></script>
+  <main id="app"></main>
+  <div class="container">
+    <div class="two-column">
+      <!-- CỘT TRÁI -->
+      <div class="left-column">
+        <h1>About</h1>
+        <section>
+          <p>
+            Tran Tuyet (b. 2003, Dak Lak) is a visual artist based in Ho Chi Minh City.
+            She approaches painting as a space for observation and self-discovery. Inspired by ordinary moments and
+            guided by intuition, her work explores emotion through an expressive and understated visual language.
+            Each painting is a quiet conversation between memory, feeling, and the act of making.
+          </p>
+          <img src="image/7842150A-38E8-41DD-9993-3C2792F6B0D3.PNG" alt="Portrait of Tran Tuyet" class="about-image">
+        </section>
+      </div>
+      <!-- CỘT PHẢI -->
+      <div class="right-column">
+        <h1>Education</h1>
+        <p>
+          2018 – 2021: College of Culture and Arts<br>
+          2021 – 2026: Ho Chi Minh City University of Fine Arts
+        </p>
+        <h1>Work Experience</h1>
+        <div class="experience-box">
+          <div class="experience">
+            <h4>Art Teacher</h4>
+            <p>
+              2019 – Present<br>
+              Art Kid<br>
+              Lux Studio
+            </p>
+            <h4>Photographe</h4>
+            <p>
+              2019 – Present<br>
+              Thành Công Camera<br>
+              Travel House
+            </p>
+          </div>
+          <div class="experience">
+            <h4>Freelancer</h4>
+            <p>
+              2021 – Present<br>
+              Web Design<br>
+              Illustration<br>
+              Event<br>
+              Drawing Class <br>
+              Drawing & Sketching <br>
+              Photographe<br>
+            </p>
+          </div>
+        </div>
+        <h1>Skill</h1>
+        <div class="box">
+          <div class="skill">
+            <span>Photoshop, Lightroom</span>
+            <div class="progress">
+              <div class="progress-bar" data-percent="70"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>Figma, Canva</span>
+            <div class="progress">
+              <div class="progress-bar" data-percent="85"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>Procreate, Blender</span>
+            <div class="progress">
+              <div class="progress-bar" data-percent="75"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>HTML – CSS – JavaScript</span>
+            <div class="progress">
+              <div class="progress-bar" data-percent="50"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>Python </span>
+            <div class="progress">
+              <div class="progress-bar" data-percent="50"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </main>
+    <footer class="footer">
+      Tran Tuyet © All rights Reserved 2026
+    </footer>
+  </div>

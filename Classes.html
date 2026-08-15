@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T U Y E T</title>
+  <link rel="icon" type="image/png" href="image/Group 9.png">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style4.css">
+</head>
+
+<body>
+  <div class="overlay" id="overlay"></div>
+  <nav class="header">
+    <img src="image/Group 9.png" alt="Logo" class="logo">
+    <div class="menu">
+      <a href="print.html" class="menu-link" data-link="#print">PRINTS</a>
+ <a href="Classes.html" class="menu-link" data-link="#contact">CLASSES</a>
+      <a href="about.html" class="menu-link" data-link="#about">ABOUT</a>
+      <a href="contact.html" class="menu-link" data-link="#contact">CONTACT</a>
+     
+    </div>
+    <div class="bars" onclick="toggleMenu()">
+      <i id="menuIcon" class="fa-solid fa-bars-staggered"></i>
+    </div>
+  </nav>
+  <nav class="sidebar" id="sidebar">
+    <a href="print.html" class="menu-link" data-link="#print">PRINTS</a>
+     <a href="Classes.html" class="menu-link" data-link="#contact">CLASSES</a>
+    <a href="about.html" class="menu-link" data-link="#about">ABOUT</a>
+    <a href="contact.html" class="menu-link" data-link="#contact">CONTACT</a>
+  </nav>
+  <script src="bars.js"></script>
+  <script src="link.js"></script>
+  <script src="script.js"></script>
+ <script src="anh.js"></script>
+ <script src="course.js"></script>
+
+ 
+<section class="hero">
+
+    <div class="hero-text">
+
+        <h1>Atelier-Inspired Art Training</h1>
+
+        <p>
+        You explore your technical abilities through a drawing curriculum that integrates creative thinking.
+        </p>
+
+        <a href="#register" class="btn">
+          Sign up now
+        </a>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <img src="image/574040606_855908853528121_7589376572217932378_n.jpg">
+
+    </div>
+
+</section>
+
+
+
+<!-- GIỚI THIỆU -->
+
+<section class="intro">
+
+    <h2>From Foundation to Creative Practice
+</h2>
+
+    <p>
+ Our art program is designed to guide students from fundamental drawing skills to advanced artistic development through a traditional fine art approach.
+
+Students will build a strong foundation in observation, form, proportion, light, color, and composition while exploring the principles behind visual creation. Through structured practice and personalized guidance, students gradually develop technical confidence, creative thinking, and their own artistic expression.
+
+Beyond traditional techniques, the program also introduces practical applications in modern creative fields such as Illustration, Concept Art, Animation, Digital Art, and AI-assisted creativity, helping students connect their artistic foundation with future professional opportunities.
+    </p>
+
+
+ 
+</section>
+
+
+
+
+<!-- COURSE -->
+
+<section class="course">
+  <div class="container"></div>
+
+<h2>What you will learn</h2>
+
+
+<div class="cards">
+
+<div class="card">
+    <h3>Art Fundamentals</h3>
+    <p>
+        Build a strong foundation in observation, form, proportion, light, color, composition, and visual thinking.
+    </p>
+</div>
+
+<div class="card">
+    <h3>Digital Art</h3>
+    <p>
+        Learn essential digital art tools, including brushes, layers, and professional creative workflows.
+    </p>
+</div>
+
+<div class="card">
+    <h3>Personal Artistic Development</h3>
+    <p>
+        Discover your unique artistic voice while building a professional portfolio for future creative opportunities.
+    </p>
+</div>
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section id="register" class="register">
+
+
+<h2>
+JOIN THE STUDIO
+</h2>
+
+<form>
+
+  <input type="text" placeholder="Name">
+
+  <input type="email" placeholder="Email">
+
+  <input type="tel" placeholder="SĐT">
+
+  <div class="course-dropdown">
+
+    <div class="course-selected">
+      <span>Select Your Course</span>
+      <span class="course-arrow">⌄</span>
+    </div>
+
+    <div class="course-options">
+
+      <div class="course-option" data-value="sketch">
+        Sketch
+      </div>
+
+      <div class="course-option" data-value="drawing-basic">
+        Drawing Basic
+      </div>
+
+      <div class="course-option" data-value="digital-art">
+        Digital Art
+      </div>
+
+    </div>
+
+    <input type="hidden" name="course" id="course">
+
+  </div>
+
+  <textarea placeholder="message"></textarea>
+
+  <button type="submit">
+    SUBMIT
+  </button>
+
+</form>
+
+</section>
+<script>
+const webhookURL = "https://discord.com/api/webhooks/1502754550610788445/7YWt8B4hnmHnOdERgxahH_ZQioSXjs6I8zKd0skzNb2QI8BzhG7W4QteajfIPRnjGoqZ";
+
+document.querySelector("form").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+    const data = [];
+
+    // Lấy toàn bộ input
+    form.querySelectorAll("input").forEach(input => {
+        // Bỏ qua button, submit, file...
+        if (
+            input.type === "submit" ||
+            input.type === "button" ||
+            input.type === "reset"
+        ) {
+            return;
+        }
+
+        // Checkbox
+        if (input.type === "checkbox") {
+            if (input.checked) {
+                data.push({
+                    name: input.name || input.id || input.placeholder || "Checkbox",
+                    value: input.value || "Đã chọn"
+                });
+            }
+            return;
+        }
+
+        // Radio
+        if (input.type === "radio") {
+            if (input.checked) {
+                data.push({
+                    name: input.name || input.id || "Radio",
+                    value: input.value
+                });
+            }
+            return;
+        }
+
+        // Các input bình thường + hidden
+        if (input.value.trim() !== "") {
+            data.push({
+                name: input.name || input.id || input.placeholder || "Input",
+                value: input.value.trim()
+            });
+        }
+    });
+
+    // Lấy select
+    form.querySelectorAll("select").forEach(select => {
+        if (select.value) {
+            const option = select.options[select.selectedIndex];
+
+            data.push({
+                name: select.name || select.id || "Select",
+                value: option ? option.textContent.trim() : select.value
+            });
+        }
+    });
+
+    // Lấy textarea
+    form.querySelectorAll("textarea").forEach(textarea => {
+        if (textarea.value.trim() !== "") {
+            data.push({
+                name: textarea.name || textarea.id || textarea.placeholder || "Message",
+                value: textarea.value.trim()
+            });
+        }
+    });
+
+    // Lấy Course của bạn
+    const course = document.getElementById("course");
+
+    if (course && course.value.trim() !== "") {
+        // Nếu chưa có course trong data thì thêm vào
+        const alreadyExists = data.some(item =>
+            item.name === "course"
+        );
+
+        if (!alreadyExists) {
+            data.push({
+                name: "Course",
+                value: course.value
+            });
+        }
+    }
+
+    // Nếu không có dữ liệu
+    if (data.length === 0) {
+        alert("Không tìm thấy thông tin trong form.");
+        return;
+    }
+
+    // Tạo nội dung gửi Discord
+    let message = "📩 **THÔNG TIN KHÁCH HÀNG MỚI**\n\n";
+
+    data.forEach(item => {
+        message += `**${item.name}:** ${item.value}\n`;
+    });
+
+    // Discord giới hạn content 2000 ký tự
+    if (message.length > 1900) {
+        message = message.substring(0, 1900) + "\n...";
+    }
+
+    try {
+        const response = await fetch(webhookURL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                content: message
+            })
+        });
+
+        if (!response.ok) {
+            throw new Error("Discord Webhook Error: " + response.status);
+        }
+
+        alert("Đăng ký thành công!");
+
+        form.reset();
+
+        // Reset lại course hiển thị
+        const courseInput = document.getElementById("course");
+
+        if (courseInput) {
+            courseInput.value = "";
+        }
+
+    } catch (error) {
+        console.error("Lỗi:", error);
+        alert("Không thể gửi thông tin sang Discord.");
+    }
+});
+</script>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    Tran Tuyet © All rights Reserved 2026
+  </footer>
+
+
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+
+
+    const webhookURL =
+    "https://discord.com/api/webhooks/1502754550610788445/7YWt8B4hnmHnOdERgxahH_ZQioSXjs6I8zKd0skzNb2QI8BzhG7W4QteajfIPRnjGoqZ";
+
+   document.addEventListener( "DOMContentLoaded", function () { const form = document.getElementById("contactForm"); if (!form) { console.error( "Không tìm thấy contactForm" ); return; } form.addEventListener( "submit", async function (e) { e.preventDefault(); const name = document.getElementById("name").value.trim(); const phone = document.getElementById("email").value.trim(); const message = document.getElementById("message").value.trim(); if ( !name || !phone || !message ) { alert( "Please fill in all fields." ); return; } const data = { content: `📩 **NEW CONTACT FORM** 👤 **Name:** ${name} 📱 **Phone:** ${phone} 💬 **Message:** ${message}` }; try { const response = await fetch( webhookURL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) } ); if (!response.ok) { throw new Error( "Discord error: " + response.status ); } alert( "✅ Message sent successfully!" ); form.reset(); } catch (error) { console.error( "Error:", error ); alert( "❌ Error sending message." ); } } ); } );
