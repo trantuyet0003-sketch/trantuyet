@@ -1,0 +1,97 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T U Y E T</title>
+  <link rel="icon" type="image/png" href="image/Group 9.png">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+  <nav class="header">
+    <img src="image/Group 9.png" alt="Logo" class="logo">
+    <div class="menu">
+      <a href="index.html" class="menu-link" data-link="#print">PRINTS</a>
+      <a href="Classes.html" class="menu-link" data-link="#contact">CLASSES</a>
+      <a href="about.html" class="menu-link" data-link="#about">ABOUT</a>
+      <a href="contact.html" class="menu-link" data-link="#contact">CONTACT</a>
+    </div>
+    <div class="bars" onclick="toggleMenu()">
+      <i id="menuIcon" class="fa-solid fa-bars-staggered"></i>
+    </div>
+  </nav>
+  <nav class="sidebar" id="sidebar">
+    <a href="index.html" class="menu-link" data-link="#print">PRINTS</a>
+    <a href="Classes.html" class="menu-link" data-link="#contact">CLASSES</a>
+    <a href="about.html" class="menu-link" data-link="#about">ABOUT</a>
+    <a href="contact.html" class="menu-link" data-link="#contact">CONTACT</a>
+  </nav>
+  <script src="bars.js"></script>
+  <script src="link.js"></script>
+  <script src="script.js"></script>
+  <script src="anh.js"></script>
+  <!-- FILTER BAR -->
+  <div class="filter-bar">
+    <span class="filter-item active" data-filter="fineart" data-link="index.html">FINE ART</span>
+    <span class="filter-item" data-filter="sketch" data-link="sketch.html">SKETCH</span>
+    <span class="filter-item" data-filter="digital" data-link="digital.html">DIGITAL</span>
+    <span class="filter-item" data-filter="design" data-link="design.html">DESIGN</span>
+  </div>
+  <!-- GALLERY -->
+  <div class="gallery">
+    <div class="gallery-item" data-category="photo">
+      <div class="img-wrap">
+        <img src="image/480322560_935055198749054_2057968793937669233_n.jpg">
+      </div>
+      <div class="title"></div>
+    </div>
+
+    <div class="gallery-item" data-category="photo">
+      <div class="img-wrap">
+        <img src="image/480319903_934501625471078_4374676311597123511_n.jpg">
+      </div>
+    </div>
+    <div class="gallery-item" data-category="photo">
+      <div class="img-wrap">
+        <img src="image/480212651_933837428870831_2804884142030493798_n.jpg">
+      </div>
+    </div>
+    <div class="gallery-item" data-category="photo">
+      <div class="img-wrap">
+        <img src="image/485179043_957050726549501_4429113555703105779_n.jpg">
+      </div>
+    </div>
+    <div class="gallery-item" data-category="print">
+      <div class="img-wrap">
+        <img src="image/540514131_1079661067621799_6792637937605789233_n.jpg">
+      </div>
+      <div class="title"></div>
+    </div>
+    <div class="gallery-item" data-category="design">
+      <div class="img-wrap">
+        <img src="image/480683274_935413478713226_5068950776820447349_n 1.png">
+      </div>
+      <div class="title"></div>
+    </div>
+    <div class="gallery-item" data-category="photo">
+      <div class="img-wrap">
+        <img src="486000904_957050783216162_703529819010156306_n.jpg">
+      </div>
+      <div class="title"></div>
+    </div>
+    <div class="gallery-item" data-category="photo">
+      <div class="img-wrap">
+        <img src="image/538190374_1072871264967446_4287590104530276210_n.jpg">
+      </div>
+      <div class="title"></div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <footer class="footer">
+    Tran Tuyet © All rights Reserved 2026
+  </footer>
+</body>
+</html>

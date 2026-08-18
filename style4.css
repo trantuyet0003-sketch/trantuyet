@@ -277,26 +277,19 @@ section {
 
 
 .hero-text h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 90px;
+    font-weight: 400;
+    line-height: .95;
+  
+  letter-spacing:-1px;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: textShow 1.2s ease forwards;
 
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:90px;
-
-    font-weight:400;
-
-    line-height:.95;
-
-    letter-spacing:-3px;
-
-
-    opacity:0;
-
-    transform:translateY(40px);
-
-    animation:textShow 1.2s ease forwards;
-
+    white-space: normal;
+    max-width: 100%;
 }
-
 
 
 .hero-text p {
@@ -524,7 +517,7 @@ h2 {
 }
 .course{
     background:#a9a9a9;
-    width:100%;
+  
     padding:80px 10%;
 }
 /* ================= FILTER ================= */
@@ -806,7 +799,7 @@ button:active {
 
         flex-direction:column;
         gap:40px;
-
+   
     }
 
 
@@ -817,10 +810,12 @@ button:active {
     }
 
 
-    .hero h1 {
-
-        font-size:38px;
-
+     .hero-text h1 {
+         letter-spacing:-3px;
+        font-size: 50px;
+        max-width: 100%;
+        white-space: normal;
+        overflow-wrap: break-word;
     }
 
 
