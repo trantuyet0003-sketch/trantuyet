@@ -54,9 +54,7 @@
 </h2>
     <p>
  Our art program is designed to guide students from fundamental drawing skills to advanced artistic development through a traditional fine art approach.
-
 Students will build a strong foundation in observation, form, proportion, light, color, and composition while exploring the principles behind visual creation. Through structured practice and personalized guidance, students gradually develop technical confidence, creative thinking, and their own artistic expression.
-
 Beyond traditional techniques, the program also introduces practical applications in modern creative fields such as Illustration, Concept Art, Animation, Digital Art, and AI-assisted creativity, helping students connect their artistic foundation with future professional opportunities.
     </p>
 </section>
@@ -72,14 +70,12 @@ Beyond traditional techniques, the program also introduces practical application
         Build a strong foundation in observation, form, proportion, light, color, composition, and visual thinking.
     </p>
 </div>
-
 <div class="card">
     <h3>Digital Art</h3>
     <p>
         Learn essential digital art tools, including brushes, layers, and professional creative workflows.
     </p>
 </div>
-
 <div class="card">
     <h3>Personal Artistic Development</h3>
     <p>
@@ -93,50 +89,33 @@ Beyond traditional techniques, the program also introduces practical application
 <h2>
 JOIN THE STUDIO
 </h2>
-
 <form>
-
   <input type="text" placeholder="Name">
-
   <input type="email" placeholder="Email">
-
   <input type="tel" placeholder="SĐT">
-
   <div class="course-dropdown">
-
     <div class="course-selected">
       <span>Select Your Course</span>
       <span class="course-arrow">⌄</span>
     </div>
-
     <div class="course-options">
-
       <div class="course-option" data-value="sketch">
         Sketch
       </div>
-
       <div class="course-option" data-value="drawing-basic">
         Drawing Basic
       </div>
-
       <div class="course-option" data-value="digital-art">
         Digital Art
       </div>
-
     </div>
-
     <input type="hidden" name="course" id="course">
-
   </div>
-
   <textarea placeholder="message"></textarea>
-
   <button type="submit">
     SUBMIT
   </button>
-
 </form>
-
 </section>
 <script>
     const dropdown = document.querySelector(".course-dropdown");
@@ -147,7 +126,6 @@ const courseInput = document.querySelector("#course");
 selected.addEventListener("click", () => {
     dropdown.classList.toggle("active");
 });
-
 options.forEach(option => {
     option.addEventListener("click", () => {
         selected.querySelector("span").textContent = option.textContent.trim();
@@ -155,9 +133,7 @@ options.forEach(option => {
         dropdown.classList.remove("active");
     });
 });
-
 </script>
-
 <script>
 const webhookURL = "https://discord.com/api/webhooks/1502754550610788445/7YWt8B4hnmHnOdERgxahH_ZQioSXjs6I8zKd0skzNb2QI8BzhG7W4QteajfIPRnjGoqZ";
 
@@ -230,7 +206,6 @@ document.querySelector("form").addEventListener("submit", async function (e) {
             });
         }
     });
-
     // Lấy Course của bạn
     const course = document.getElementById("course");
 
@@ -298,13 +273,10 @@ document.querySelector("form").addEventListener("submit", async function (e) {
     }
 });
 </script>
-
   <!-- FOOTER -->
   <footer class="footer">
     Tran Tuyet © All rights Reserved 2026
   </footer>
-
-
-
 </body>
 </html>
+
