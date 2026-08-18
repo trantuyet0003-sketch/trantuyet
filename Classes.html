@@ -33,7 +33,6 @@
   <script src="link.js"></script>
   <script src="script.js"></script>
  <script src="anh.js"></script>
-
  <script src="course.js"></script>
 <section class="hero">
     <div class="hero-text">
@@ -139,6 +138,26 @@ JOIN THE STUDIO
 </form>
 
 </section>
+<script>
+    const dropdown = document.querySelector(".course-dropdown");
+const selected = document.querySelector(".course-selected");
+const options = document.querySelectorAll(".course-option");
+const courseInput = document.querySelector("#course");
+
+selected.addEventListener("click", () => {
+    dropdown.classList.toggle("active");
+});
+
+options.forEach(option => {
+    option.addEventListener("click", () => {
+        selected.querySelector("span").textContent = option.textContent.trim();
+        courseInput.value = option.dataset.value;
+        dropdown.classList.remove("active");
+    });
+});
+
+</script>
+
 <script>
 const webhookURL = "https://discord.com/api/webhooks/1502754550610788445/7YWt8B4hnmHnOdERgxahH_ZQioSXjs6I8zKd0skzNb2QI8BzhG7W4QteajfIPRnjGoqZ";
 
