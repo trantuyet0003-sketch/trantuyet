@@ -5,14 +5,16 @@
   <link rel="icon" type="image/png" href="image/Group 9.png">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style5.css">
 </head>
 <body>
   <div class="overlay" id="overlay"></div>
   <nav class="header">
+
     <img src="image/Group 9.png" alt="Logo" class="logo">
     <div class="menu">
-      <a href="index.html" class="menu-link" data-link="#print">PRINTS</a>
+      <a href="index.html" class="menu-link" data-link="#home">Home</a>
+     <a href="prints.html" class="menu-link" data-link="#print">PRINTS</a>
       <a href="Classes.html" class="menu-link" data-link="#contact">CLASSES</a>
       <a href="about.html" class="menu-link" data-link="#about">ABOUT</a>
       <a href="contact.html" class="menu-link" data-link="#contact">CONTACT</a>
@@ -22,7 +24,8 @@
     </div>
   </nav>
   <nav class="sidebar" id="sidebar">
-    <a href="index.html" class="menu-link" data-link="#print">PRINTS</a>
+      <a href="index.html" class="menu-link" data-link="#home">Home</a>
+   <a href="prints.html" class="menu-link" data-link="#print">PRINTS</a>
     <a href="Classes.html" class="menu-link" data-link="#contact">CLASSES</a>
     <a href="about.html" class="menu-link" data-link="#about">ABOUT</a>
     <a href="contact.html" class="menu-link" data-link="#contact">CONTACT</a>
@@ -31,67 +34,106 @@
   <script src="link.js"></script>
   <script src="script.js"></script>
   <script src="anh.js"></script>
-  <!-- FILTER BAR -->
-  <div class="filter-bar">
-    <span class="filter-item active" data-filter="fineart" data-link="index.html">FINE ART</span>
-    <span class="filter-item" data-filter="sketch" data-link="sketch.html">SKETCH</span>
-    <span class="filter-item" data-filter="digital" data-link="digital.html">DIGITAL</span>
-    <span class="filter-item" data-filter="design" data-link="design.html">DESIGN</span>
-  </div>
-  <!-- GALLERY -->
-  <div class="gallery">
-    <div class="gallery-item" data-category="photo">
-      <div class="img-wrap">
-        <img src="image/480322560_935055198749054_2057968793937669233_n.jpg">
-      </div>
-      <div class="title"></div>
+ 
+<section class="hero">
+
+    <img
+        class="hero-img"
+        src="image/IMG_8852 4.jpg"
+        alt="Tran Tuyet"
+    >
+
+    <div class="hero-content">
+        <p class="hero-subtitle">
+            ARTIST · PAINTER · ART EDUCATOR
+        </p>
+
+        <h1>T U Y E T</h1>
+
+        <p class="hero-scroll">
+            SCROLL TO EXPLORE ↓
+        </p>
     </div>
 
-    <div class="gallery-item" data-category="photo">
-      <div class="img-wrap">
-        <img src="image/480319903_934501625471078_4374676311597123511_n.jpg">
-      </div>
+</section>
+<section class="about-intro">
+
+    <div class="about-label">
+        ABOUT
     </div>
-    <div class="gallery-item" data-category="photo">
-      <div class="img-wrap">
-        <img src="image/480212651_933837428870831_2804884142030493798_n.jpg">
-      </div>
+
+    <div class="about-text">
+        <h2>I AM AN ARTIST<br>
+            MAKING ART.
+        </h2>
+
+        <p>
+            My practice explores everyday life through painting,
+            observation and visual storytelling. I am interested in
+            finding beauty in ordinary moments and transforming them
+            into personal visual experiences.
+        </p>
+
+        <a href="about.html" class="about-link">
+            MORE ABOUT ME →
+        </a>
     </div>
-    <div class="gallery-item" data-category="photo">
-      <div class="img-wrap">
-        <img src="image/485179043_957050726549501_4429113555703105779_n.jpg">
-      </div>
+
+</section>
+
+<div class="about-links">
+
+    <a href="Classes.html" class="about-card">
+        <div class="about-image">
+            <img src="image/606027083_901780532274286_6609460865331405833_n.jpg" alt="Classes">
+        </div>
+
+        <div class="about-info">
+               <small>01 / CLASSES</small>
+            <h3>CLASSES</h3>
+            <p>Drawing and art classes for those who love to create.</p>
+            <span>VIEW CLASSES →</span>
+        
+        </div>
+    </a>
+
+    <a href="prints.html" class="about-card">
+        <div class="about-image">
+            <img src="image/Group 273.png" alt="My works">
+        </div>
+
+        <div class="about-info">
+            <small>02 / WORKS</small>
+            <h3>MY WORKS</h3>
+            <p>A collection of paintings, drawings and visual projects.</p>
+            <span>VIEW WORKS →</span>
+        </div>
+    </a>
+
+
+
+
+<div class="footer-social">
+
+   <a href="https://instagram.com/" target="_blank" aria-label="Instagram">
+    <i class="fa-brands fa-instagram"></i>
+</a>
+
+    <a href="https://facebook.com/" target="_blank" aria-label="Facebook">
+        f
+    </a>
+
+    <a href="https://behance.net/" target="_blank" aria-label="Behance">
+        Be
+    </a>
+
+
+
+</div>
+    <div class="footer-bottom">
+        <span>Tran Tuyet © All Rights Reserved 2026</span>
     </div>
-    <div class="gallery-item" data-category="print">
-      <div class="img-wrap">
-        <img src="image/540514131_1079661067621799_6792637937605789233_n.jpg">
-      </div>
-      <div class="title"></div>
-    </div>
-    <div class="gallery-item" data-category="design">
-      <div class="img-wrap">
-        <img src="image/480683274_935413478713226_5068950776820447349_n 1.png">
-      </div>
-      <div class="title"></div>
-    </div>
-    <div class="gallery-item" data-category="photo">
-      <div class="img-wrap">
-        <img src="486000904_957050783216162_703529819010156306_n.jpg">
-      </div>
-      <div class="title"></div>
-    </div>
-    <div class="gallery-item" data-category="photo">
-      <div class="img-wrap">
-        <img src="image/538190374_1072871264967446_4287590104530276210_n.jpg">
-      </div>
-      <div class="title"></div>
-    </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  <footer class="footer">
-    Tran Tuyet © All rights Reserved 2026
-  </footer>
+
+</footer>
 </body>
 </html>
